@@ -7,18 +7,11 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.4",
-    "gsap": "^3.9.1",
-    "node-sass": "^7.0.1",
-    "npm": "^8.5.5",
-    "postcss": "^8.4.12",
+    "axios": "^0.26.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
-    "sass": "^1.49.9",
-    "sass-loader": "^12.6.0",
-    "scss": "^0.2.4",
-    "uninstall": "^0.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -44,5 +37,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gsap": "^3.9.1",
+    "node-sass": "^7.0.1",
+    "postcss": "^8.4.12",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "scss": "^0.2.4"
   }
 }
