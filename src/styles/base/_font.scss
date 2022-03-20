@@ -1,12 +1,4 @@
-@font-face {
-  font-family: $font-kross;
-  src: url('../../assets/fonts/KrossNeueGrotesk-Heavy.woff2') format('woff2'),
-  url('../../assets/fonts/KrossNeueGrotesk-Heavy.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
+//KROSS NEUE GROTESK
 @font-face {
   font-family: $font-kross;
   src: url('../../assets/fonts/KrossNeueGrotesk-Bold.woff2') format('woff2'),
@@ -33,3 +25,37 @@
   font-style: normal;
   font-display: swap;
 }
+
+//LATO
+@font-face {
+  font-family: $font-lato;
+  src: url('../../assets/fonts/Lato-Heavy.woff2') format('woff2'),
+  url('../../assets/fonts/Lato-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-lato;
+  src: url('../../assets/fonts/Lato-Bold.woff2') format('woff2'),
+  url('../../assets/fonts/Lato-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-lato;
+  src: url('../../assets/fonts/Lato-Semibold.woff2') format('woff2'),
+  url('../../assets/fonts/Lato-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-lato;
+  src: url('../../assets/fonts/Lato-Regular.woff2') format('woff2'),
+  url('../../assets/fonts/Lato-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+

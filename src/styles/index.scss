@@ -1,14 +1,25 @@
 @import 'base/reset';
 
-@import 'utils/mixins';
-@import 'utils/variables';
 @import 'utils/functions';
+@import 'utils/mixins';
+@import 'utils/responsive';
+@import 'utils/variables';
+
+@import 'shared/titles';
+@import 'shared/descriptions';
+@import 'shared/buttons';
+@import 'shared/links';
 
 @import 'base/base';
 @import 'base/font';
 
+@import 'pages/home';
+@import 'pages/login';
+
 @import 'components/header';
-@import 'components/home';
-@import 'components/login';
+@import 'components/hero';
+@import 'components/presentation';
+@import 'components/article';
+@import 'components/card';
 @import 'components/footer';
 

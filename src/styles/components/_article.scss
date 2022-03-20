@@ -1,0 +1,78 @@
+.article {
+  position: relative;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  float: right;
+  //width: 92%;
+  width: 167rem;
+  margin-bottom: 9.7rem;
+
+  &:last-child {
+    float: left;
+    padding-left: 10rem;
+    width: 172rem;
+    align-items: flex-start;
+  }
+}
+
+.article__content {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8rem;
+
+  .article:first-child & {
+    transform: translateY(-4rem);
+  }
+}
+
+.article__title {
+  @extend %title48
+}
+
+.article__text {
+  @extend %description18;
+
+  max-width: 75rem;
+}
+
+//btns
+.article__btns {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+
+  .app {
+    @extend %button__cta--active;
+  }
+
+  .site {
+    @extend %button__cta--inactive;
+  }
+}
+
+.article__btn {
+  @extend %button__cta--active;
+}
+
+//image
+.article__media {
+  position: relative;
+  width: 84.3rem;
+  height: 102.1rem;
+
+  .article:last-child & {
+    width: 88.6rem;
+    height: 83.5rem;
+  }
+}
+
+.article__media__img {
+  @extend %cover;
+
+  left: 5rem;
+  object-fit: cover;
+}

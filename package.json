@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "gsap": "^3.9.1",
+    "include-media": "^1.4.10",
     "node-sass": "^7.0.1",
     "postcss": "^8.4.12",
     "sass": "^1.49.9",

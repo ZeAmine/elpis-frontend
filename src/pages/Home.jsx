@@ -1,10 +1,12 @@
+//components
+import Hero from '../components/Hero';
+import Presentation from '../components/Presentation';
+
 const Home = () => {
     return (
       <div className="home">
-        <div className="home__wrapper">
-          <h1>Bienvenue sur le site</h1>
-          <p>Connectez vous s'il vous plait</p>
-        </div>
+        <Hero/>
+        <Presentation/>
       </div>
     );
 };

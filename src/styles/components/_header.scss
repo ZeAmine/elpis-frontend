@@ -1,11 +1,10 @@
 header {
-  //position: fixed;
-  //top: 0;
-  //left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   min-height: 5rem;
-  padding: 1.375rem 0;
-  background-color: mediumseagreen;
+  padding: 2.175rem 0;
   z-index: z("header");
 }
 
@@ -14,16 +13,20 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
-  max-width: 90rem;
+  width: 85%;
+  //max-width: 90rem;
   margin: 0 auto;
   z-index: 2;
+}
+
+.header__nav {
+  padding-left: 3rem;
 }
 
 .header__nav__list {
   display: flex;
   align-items: center;
-  gap: 3.125rem;
+  gap: 7rem;
 }
 
 .header__nav__link {
@@ -33,8 +36,29 @@ header {
   color: currentColor;
 }
 
-.header__auth {
+.header__nav__item__text {
+  @extend %description14;
+
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.header__nav__item__btns {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
+
+  .login {
+    @extend %button__cta--inactive
+  }
+
+  .register {
+    @extend %button__cta--active
+  }
+}
+
+.header__nav__item__btn {
+  @extend %button__cta--active;
+
+
 }

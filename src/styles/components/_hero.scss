@@ -1,0 +1,53 @@
+.hero  {
+  width: 100%;
+  height: 100vh;
+}
+
+.hero__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 24rem 10rem 0 10rem;
+}
+
+.hero__bg {
+  @extend %cover;
+}
+
+.hero__bg__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__content {
+  display: inline-block;
+  z-index: 1;
+}
+
+.hero__content__title {
+  @extend %title64;
+}
+
+.hero__content__subtitle {
+  @extend %description24;
+
+  padding-top: 4rem;
+}
+
+.hero__content__btns {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  margin-top: 6rem;
+}
+
+.hero__content__btn-cta {
+  @extend %button__cta--active;
+}
+
+.hero__content__btn-arrow {
+  @extend %button__slide--active;
+}

@@ -1,12 +1,14 @@
 import {BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 import './styles/index.scss';
 
+//pages
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+
 //component
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import Login from "./components/Login";
-import Register from "./components/Register";
 
 function App() {
   return (
@@ -15,8 +17,8 @@ function App() {
         <Header/>
         <Routes>
           <Route path="/"  element={<Home/>}/>
-          <Route path="/login"  element={<Login/>}/>
-          <Route path="/register"  element={<Register/>}/>
+          <Route path="/connection"  element={<Login/>}/>
+          <Route path="/inscription"  element={<Register/>}/>
         </Routes>
         <Footer />
       </Router>
