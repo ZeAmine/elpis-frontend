@@ -60,7 +60,7 @@ const Login = () => {
   return (
     <>
       {success ? (
-        <section className="global-modal">
+        <section className="zdzd">
           <h1>You are logged in !</h1>
           <br/>
           <p>
@@ -68,43 +68,46 @@ const Login = () => {
           </p>
         </section>
       ) : (
-        <div className="global-modal">
-          <div className="overlay">
-            <div className="container-modal">
-              <p ref={errRef} className={error ? "errmsg" : "offscreen"} aria-live="assertive">
-                {error}
-              </p>
-              <form onSubmit={handleSubmit} className="form-auth">
-                <h2>Connexion</h2>
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  ref={emailRef}
-                  autoComplete="off"
-                  onChange={(e) => setEmail(e.target.value)}
-                  value={email}
-                  required
-                />
+        <section className="login">
+          <div className="login__wrapper">
+            <p ref={errRef} className={error ? "errmsg" : "offscreen"} aria-live="assertive">
+              {error}
+            </p>
+            <form onSubmit={handleSubmit} className="login__form">
+              <h2>Connexion</h2>
 
-                <label htmlFor="pwd">Mot de passe</label>
-                <input
-                  type="password"
-                  id="pwd"
-                  onChange={(e) => setPwd(e.target.value)}
-                  value={pwd}
-                  required
-                />
+              {/*<label htmlFor="email">Email</label>*/}
+              <input
+                type="email"
+                id="email"
+                ref={emailRef}
+                autoComplete="off"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                placeholder="Email"
+                required
+              />
 
-                <button className="btn-sign">Se connecter</button>
-              </form>
+              {/*<label htmlFor="pwd">Mot de passe</label>*/}
+              <input
+                type="password"
+                id="pwd"
+                onChange={(e) => setPwd(e.target.value)}
+                value={pwd}
+                placeholder="Mot de passe"
+                required
+              />
 
-              <span className="line">
-                <Link to="/inscription">Besoin de créer un compte</Link>
-              </span>
-            </div>
+              <button className="btn-sign">
+                <span>Se connecter</span>
+              </button>
+            </form>
+
+            <span className="login__other">
+              <Link to="/inscription">Besoin de créer un compte</Link>
+            </span>
           </div>
-        </div>
+        </section>
       )}
     </>
   );

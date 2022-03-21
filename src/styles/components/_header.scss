@@ -1,4 +1,4 @@
-header {
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,6 +6,16 @@ header {
   min-height: 5rem;
   padding: 2.175rem 0;
   z-index: z("header");
+}
+
+.header__brand {
+  position: relative;
+  width: 12.5rem;
+  height: 5.8rem;
+}
+
+.header__brand__icon {
+  @extend %cover;
 }
 
 .header__wrap {
@@ -48,11 +58,11 @@ header {
   align-items: center;
   gap: 1.5rem;
 
-  .login {
+  .login__btn {
     @extend %button__cta--inactive
   }
 
-  .register {
+  .register__btn {
     @extend %button__cta--active
   }
 }

@@ -55,3 +55,34 @@ export const partners = [
       img: "9.png"
     }
 ]
+
+export const values = [
+  {
+    id: 1,
+    title: "Respect",
+    description: "Lorem ipsum dolor sit amet. Eum internos laboriosam sed reiciendis fugiat id consequatur laudantium eum " +
+      "odio voluptate. Id facilis voluptate sed impedit aut nihil minus et neque exercitationem et atque soluta;",
+    img: "11.png"
+  },
+  {
+    id: 2,
+    title: "Bienveillance",
+    description: "Lorem ipsum dolor sit amet. Eum internos laboriosam sed reiciendis fugiat id consequatur laudantium eum " +
+      "odio voluptate. Id facilis voluptate sed impedit aut nihil minus et neque exercitationem et atque soluta;",
+    img: "12.png"
+  },
+  {
+    id: 3,
+    title: "Partage",
+    description: "Lorem ipsum dolor sit amet. Eum internos laboriosam sed reiciendis fugiat id consequatur laudantium eum " +
+      "odio voluptate. Id facilis voluptate sed impedit aut nihil minus et neque exercitationem et atque soluta;",
+    img: "13.png"
+  },
+  {
+    id: 4,
+    title: "Confidentialité",
+    description: "Lorem ipsum dolor sit amet. Eum internos laboriosam sed reiciendis fugiat id consequatur laudantium eum " +
+      "odio voluptate. Id facilis voluptate sed impedit aut nihil minus et neque exercitationem et atque soluta;",
+    img: "14.png"
+  }
+]

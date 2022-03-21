@@ -1,0 +1,84 @@
+.bubble {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+
+  .about__bubble__item:nth-child(1) & {
+    left: 8rem;
+  }
+  .about__bubble__item:nth-child(2) & {
+    top: -4rem;
+    left: 12rem;
+  }
+  .about__bubble__item:nth-child(3) & {
+    top: 4rem;
+    left: 8rem;
+  }
+  .about__bubble__item:nth-child(4) & {
+    top: -4rem;
+    left: 2rem;
+  }
+}
+
+.bubble__media {
+  position: relative;
+
+  .about__bubble__item:nth-child(1) & {
+    width: 40rem;
+    height: 45rem;
+  }
+  .about__bubble__item:nth-child(2) & {
+    width: 50.5rem;
+    height: 45rem;
+  }
+  .about__bubble__item:nth-child(3) & {
+    width: 37.6rem;
+    height: 45rem;
+  }
+  .about__bubble__item:nth-child(4) & {
+    width: 49rem;
+    height: 45rem;
+  }
+}
+
+.bubble__media__img {
+  @extend %cover;
+
+  object-fit: cover;
+}
+
+.bubble__content {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 25.3rem;
+  height: 26.8rem;
+
+  .about__bubble__item:nth-child(1) & {
+    left: 54%;
+  }
+  .about__bubble__item:nth-child(2) & {
+    left: 43%;
+  }
+  .about__bubble__item:nth-child(3) & {
+    left: 60%;
+  }
+  .about__bubble__item:nth-child(4) & {
+    left: 60%;
+  }
+}
+
+.bubble__title {
+  @extend %title24;
+
+  color: $color-alabaster;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.bubble__description {
+  @extend %description18;
+
+  color: $color-alabaster;
+}

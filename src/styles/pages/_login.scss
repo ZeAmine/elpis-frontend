@@ -1,105 +1,59 @@
-.global-modal {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100%;
-}
-.content-container button {
-  padding: 10px 12px;
-  font-size: 20px;
-  margin-top: 10px;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
-.container-modal {
-  position: absolute;
-  background: mediumseagreen;
-  z-index: 100;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50% , -50%);
-  width: 100%;
-  max-width: 400px;
-  min-width: 300px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  padding: 25px;
-  border-radius: 5px;
+.login__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 43rem;
+  height: auto;
+  padding: 5rem;
+  border-radius: 0.5rem;
 }
 
-.hide-modal {
-  display: none;
-}
-.form-auth {
+.login__form {
   position: relative;
-  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  height: 100%;
 }
 
-.form-auth h2 {
+.login__form h2 {
+  @extend %title36;
+
   text-align: center;
-  font-weight: lighter;
-  font-size: 35px;
-  padding-bottom: 10px;
+  padding-bottom: 5rem;
 }
 
-.form-auth label,
-.form-auth input {
-  display: block;
+.login__form label {
+  @extend %description18;
+}
+
+.login__form input {
+  @extend %description18;
+
   width: 100%;
-  font-size: 20px;
-
-}
-.form-auth label {
-  margin-top: 20px;
-  padding-bottom: 5px;
-}
-.form-auth input {
-  padding: 10px;
-  border-radius: 5px;
+  padding: 1.5rem 2rem;
   border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 0.5rem;
+  background: #efefef;
 }
 
-.btn-sign{
-  display: block;
-  width: 100%;
-  padding: 15px 0;
-  margin: 30px 0 10px 0;
-  font-size: 22px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  background-color: whitesmoke;
-  color: black;
-}
-.bottom-help-txt {
-  margin-top: 3px;
-  cursor: pointer;
-}
-.btn-close {
-  background: crimson;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: -40px;
-  right: 0;
-  font-size: 20px;
-  color: #f1f1f1;
-  border: none;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  cursor: pointer;
+.btn-sign {
+  @extend %button__cta--active;
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-.register {
-  @extend %button__cta--active
+.login__other {
+  @extend %description18;
 }

@@ -98,76 +98,79 @@ const Register = () => {
           </p>
         </section>
       ) : (
-        <div className="global-modal">
-          <div className="overlay">
-            <div className="container-modal">
-              <p ref={errRef} className={error ? "errmsg" : "offscreen"} aria-live="assertive">
-                {error}
-              </p>
-              <form onSubmit={handleSubmit} className="form-auth">
-                <h2>Inscription</h2>
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  ref={emailRef}
-                  autoComplete="off"
-                  onChange={(e) => setEmail(e.target.value)}
-                  value={email}
-                  required
-                  aria-invalid={validName ? "false" : "true"}
-                  aria-describedby="uidnote"
-                  onFocus={() => setEmailFocus(true)}
-                  onBlur={() => setEmailFocus(false)}
-                />
-                <p id="uidnote" className={emailFocus && email && !validName ? "instructions" : "offscreen"}>
-                  4 to 24 characters.<br />
-                  Must begin with a letter.<br />
-                  Letters, numbers, underscores, hyphens allowed.
-                </p>
+        <div className="login">
+          <div className="login__wrapper">
+            <p ref={errRef} className={error ? "errmsg" : "offscreen"} aria-live="assertive">
+              {error}
+            </p>
+            <form onSubmit={handleSubmit} className="login__form">
+              <h2>Inscription</h2>
 
-                <label htmlFor="password">Votre mot de passe</label>
-                <input
-                  type="password"
-                  id="password"
-                  onChange={(e) => setPwd(e.target.value)}
-                  value={pwd}
-                  required
-                  aria-invalid={validPwd ? "false" : "true"}
-                  aria-describedby="pwdnote"
-                  onFocus={() => setPwdFocus(true)}
-                  onBlur={() => setPwdFocus(false)}
-                />
-                <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
-                  8 to 24 characters.<br />
-                  Must include uppercase and lowercase letters, a number and a special character.<br />
-                  Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
-                </p>
+              {/*<label htmlFor="email">Email</label>*/}
+              <input
+                type="email"
+                id="email"
+                ref={emailRef}
+                autoComplete="off"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                placeholder="Email"
+                required
+                aria-invalid={validName ? "false" : "true"}
+                aria-describedby="uidnote"
+                onFocus={() => setEmailFocus(true)}
+                onBlur={() => setEmailFocus(false)}
+              />
+              {/*<p id="uidnote" className={emailFocus && email && !validName ? "instructions" : "offscreen"}>*/}
+              {/*  4 to 24 characters.<br />*/}
+              {/*  Must begin with a letter.<br />*/}
+              {/*  Letters, numbers, underscores, hyphens allowed.*/}
+              {/*</p>*/}
 
-                {/*<label htmlFor="confirm_pwd">Confirmer le mot de passe</label>*/}
-                {/*<input*/}
-                {/*  type="password"*/}
-                {/*  id="confirm_pwd"*/}
-                {/*  onChange={(e) => setMatchPwd(e.target.value)}*/}
-                {/*  value={matchPwd}*/}
-                {/*  required*/}
-                {/*  aria-invalid={validMatch ? "false" : "true"}*/}
-                {/*  aria-describedby="confirmnote"*/}
-                {/*  onFocus={() => setMatchFocus(true)}*/}
-                {/*  onBlur={() => setMatchFocus(false)}*/}
-                {/*/>*/}
-                {/*<p id="confirmnote" className={matchFocus && !validMatch ? "instructions" : "offscreen"}>*/}
-                {/*  Must match the first password input field.*/}
-                {/*</p>*/}
+              {/*<label htmlFor="password">Votre mot de passe</label>*/}
+              <input
+                type="password"
+                id="password"
+                onChange={(e) => setPwd(e.target.value)}
+                value={pwd}
+                placeholder="Mot de passe"
+                required
+                aria-invalid={validPwd ? "false" : "true"}
+                aria-describedby="pwdnote"
+                onFocus={() => setPwdFocus(true)}
+                onBlur={() => setPwdFocus(false)}
+              />
+              {/*<p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>*/}
+              {/*  8 to 24 characters.<br />*/}
+              {/*  Must include uppercase and lowercase letters, a number and a special character.<br />*/}
+              {/*  Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>*/}
+              {/*</p>*/}
 
-                {/*<button disabled={!validName || !validPwd || !validMatch}>S'inscrire</button>*/}
-                <button type="submit" className="register">S'inscrire</button>
-              </form>
+              {/*<label htmlFor="confirm_pwd">Confirmer le mot de passe</label>*/}
+              {/*<input*/}
+              {/*  type="password"*/}
+              {/*  id="confirm_pwd"*/}
+              {/*  onChange={(e) => setMatchPwd(e.target.value)}*/}
+              {/*  value={matchPwd}*/}
+              {/*  required*/}
+              {/*  aria-invalid={validMatch ? "false" : "true"}*/}
+              {/*  aria-describedby="confirmnote"*/}
+              {/*  onFocus={() => setMatchFocus(true)}*/}
+              {/*  onBlur={() => setMatchFocus(false)}*/}
+              {/*/>*/}
+              {/*<p id="confirmnote" className={matchFocus && !validMatch ? "instructions" : "offscreen"}>*/}
+              {/*  Must match the first password input field.*/}
+              {/*</p>*/}
 
-              <Link to="/connection">
-                <p className="bottom-help-txt">Vous avez déjà un compte</p>
-              </Link>
-            </div>
+              {/*<button disabled={!validName || !validPwd || !validMatch}>S'inscrire</button>*/}
+              <button type="submit" className="btn-sign">
+                <span>S'inscrire</span>
+              </button>
+            </form>
+
+            <span className="login__other">
+              <Link to="/connection">Vous avez déjà un compte</Link>
+            </span>
           </div>
         </div>
       )}

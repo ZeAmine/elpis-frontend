@@ -6,7 +6,7 @@
   float: right;
   //width: 92%;
   width: 167rem;
-  margin-bottom: 9.7rem;
+  margin-bottom: 27rem;
 
   &:last-child {
     float: left;
@@ -65,6 +65,8 @@
   height: 102.1rem;
 
   .article:last-child & {
+    position: relative;
+    top: 10rem;
     width: 88.6rem;
     height: 83.5rem;
   }
