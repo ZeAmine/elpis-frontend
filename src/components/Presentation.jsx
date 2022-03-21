@@ -9,6 +9,9 @@ const Presentation = () => {
   return (
     <section className="pres">
       <div className="pres__wrapper">
+        <figure className="pres__bg__media">
+          <img src={process.env.PUBLIC_URL + "./assets/images/bg.png"} alt="line background" className="pres__bg__media__img"/>
+        </figure>
         <h1 className="pres__title">Elpis, c'est quoi ?</h1>
         <section className="pres__articles">
           {articles.map(article => (

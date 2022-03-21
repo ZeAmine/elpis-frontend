@@ -9,6 +9,20 @@
   height: 100%;
 }
 
+.pres__bg__media {
+  @extend %cover;
+
+  width: 210.8rem;
+  height: 871.8rem;
+}
+
+.pres__bg__media__img {
+  @extend %cover;
+
+  left: -10rem;
+  object-fit: contain;
+}
+
 //title
 .pres__title {
   @extend %title64;

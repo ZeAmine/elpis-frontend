@@ -1,24 +1,24 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from "react-router-dom";
 import { useGlobalContext } from '../context/AuthContext'
-import axios from '../api/axios';
 
-const LOGIN_URL = '/auth'
+import axios from 'axios';
+const LOGIN_URL = '/login'
 
 const Login = () => {
   const { setAuth } = useGlobalContext();
 
-  const [user, setUser] = useState('');
+  const [email, setEmail] = useState('');
   const [pwd, setPwd] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
 
-  const userRef = useRef([]);
+  const emailRef = useRef([]);
   const errRef = useRef([]);
 
   useEffect(() => {
     setError('');
-  }, [user, pwd])
+  }, [email, pwd])
 
   const navigate = useNavigate();
 
@@ -27,19 +27,18 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        LOGIN_URL,
-        JSON.stringify({ user, pwd }),
+        'http://127.0.0.1:8080/login',
+        JSON.stringify({ email, pwd }),
         {
           headers: {'Content-Type': 'application/json'},
           withCredentials: true
         }
       );
       console.log(JSON.stringify(response?.data));
-      // console.log(JSON.stringify(res));
-      const accessToken = response?.data?.accessToken;
+      // const accessToken = response?.data?.accessToken;
       const roles = response?.data?.roles;
-      setAuth({ user, pwd, roles, accessToken })
-      setUser('');
+      setAuth({ email, pwd, roles });
+      setEmail('');
       setPwd('');
       setSuccess(true);
       navigate('/');
@@ -47,7 +46,7 @@ const Login = () => {
       if (!error?.response) {
         setError('No Server Response');
       } else if (error.response?.status === 600) {
-        setError('Missing Username or Password')
+        setError('Missing Email or Password')
       } else if (error.response?.status === 401) {
         setError('Unauthorized')
       } else {
@@ -77,14 +76,14 @@ const Login = () => {
               </p>
               <form onSubmit={handleSubmit} className="form-auth">
                 <h2>Connexion</h2>
-                <label htmlFor="user">Nom d'utilisateur</label>
+                <label htmlFor="email">Email</label>
                 <input
-                  type="text"
-                  id="user"
-                  ref={userRef}
+                  type="email"
+                  id="email"
+                  ref={emailRef}
                   autoComplete="off"
-                  onChange={(e) => setUser(e.target.value)}
-                  value={user}
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                   required
                 />
 
@@ -101,7 +100,7 @@ const Login = () => {
               </form>
 
               <span className="line">
-                <Link to="/register">Besoin de créer un compte</Link>
+                <Link to="/inscription">Besoin de créer un compte</Link>
               </span>
             </div>
           </div>
