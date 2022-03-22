@@ -50,22 +50,29 @@
 
 .bubble__content {
   position: absolute;
-  top: 50%;
   transform: translate(-50%, -50%);
   width: 25.3rem;
   height: 26.8rem;
 
   .about__bubble__item:nth-child(1) & {
-    left: 54%;
+    top: 50%;
+    left: 56%;
+    width: 27rem;
   }
   .about__bubble__item:nth-child(2) & {
+    top: 56%;
     left: 43%;
+    width: 29rem;
   }
   .about__bubble__item:nth-child(3) & {
-    left: 60%;
+    top: 58%;
+    left: 56%;
+    width: 29rem;
   }
   .about__bubble__item:nth-child(4) & {
+    top: 63%;
     left: 60%;
+    width: 26rem;
   }
 }
 

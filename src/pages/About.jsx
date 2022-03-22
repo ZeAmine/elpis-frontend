@@ -18,11 +18,18 @@ const About = () => {
             <div className="about__article__content">
               <h4 className="about__article__title">Notre histoire</h4>
               <p className="about__article__text">
-                Elpis est un réseau social permettant de mettre en relation les réfugiés dans le besoin et les bénévoles qui proposent un logement gratuitement ou tout autres types d’aides. <br/><br/>
-                Le réseau social est né en 2022 et a été mis au monde par une équipe de sept étudiants, tous concernés, préoccupés et réunis autour d’une même cause. Une grande cause pour laquelle il est important de se mobiliser, c’est pourquoi nous sommes à l’origine de cette démarche et c’est également pourquoi on espère tous qu’un grand nombre s’y inscriront, d’un côté comme de l’autre. Nous avons conçu ce site avec tout le soin possible pour vous apporter une expérience utilisateur unique et simplifiée au maximum. <br/><br/>
-                Lorem ipsum dolor sit amet. 33 dolores earum eum quibusdam quae qui galisum facilis. Aut libero quis ab quia veniam a quam omnis et galisum veniam sit illo eligendi? Id illo tempore voluptate dolorem et nemo consequatur ad expedita perspiciatis. <br/><br/>
-                Ut quis nisi a aliquam voluptatibus qui perspiciatis doloribus. Aut minus debitis et commodi cumque et dolores similique. Non nihil deserunt qui molestiae ipsam et maxime amet ut voluptatum sunt non eligendi tempora. Qui laudantium velit sed minima enim non internos voluptates qui nesciunt consequatur. <br/><br/>
-                Eum voluptatum voluptates est saepe pariatur est itaque velit ut enim neque! Id dignissimos exercitationem et tempora ratione qui facere inventore est dolor amet aut praesentium deserunt. Non magni cumque est rerum accusamus aut similique amet. <br/><br/>
+                Elpis est un réseau social permettant de mettre en relation les réfugiés dans le besoin et les bénévoles
+                qui proposent un logement gratuitement ou tout autres types d’aides. <br/><br/>
+                Le réseau social est né en 2022 et a été mis au monde par une équipe de sept étudiants, tous concernés,
+                préoccupés et réunis autour d’une même cause. Une grande cause pour laquelle il est important de se
+                mobiliser, c’est pourquoi nous sommes à l’origine de cette démarche et c’est également pourquoi on espère
+                tous qu’un grand nombre s’y inscriront, d’un côté comme de l’autre. Nous avons conçu ce site avec tout
+                le soin possible pour vous apporter une expérience utilisateur unique et simplifiée au maximum. <br/><br/>
+                Notre but est d’allumer une lanterne, celle de l’espoir, que Elpis devienne le début d’un mouvement
+                de compréhension et d’intégration des réfugiés, nous voulons aider à casser les codes, stopper
+                les stéréotypes et faire passer les Français à l’action et montré que l’on est un peuple solidaire. <br/><br/>
+                Elpis à ce nom, car c’est la déesse de l’espoir, alors nous souhaitons donner un nouvel espoir aux
+                personnes qui ont connu le pire.
               </p>
             </div>
             <figure className="about__article__media">
