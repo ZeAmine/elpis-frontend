@@ -1,8 +1,19 @@
+%title22 {
+  font: 2.2rem $font-kross;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+
+  @include media('<phone') {
+    font-size: 5.2rem;
+  }
+}
+
 %title24 {
   font: 2.4rem $font-kross;
   font-weight: bold;
-  line-height: 1.1;
-  letter-spacing: -0.15rem;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
 
   @include media('<phone') {
     font-size: 5.2rem;
@@ -13,7 +24,7 @@
   font: 3.6rem $font-kross;
   font-weight: bold;
   line-height: 1.1;
-  letter-spacing: -0.15rem;
+  letter-spacing: -0.1rem;
 
   @include media('<phone') {
     font-size: 5.2rem;

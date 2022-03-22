@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from "react-router-dom";
-import { useGlobalContext } from '../context/AuthContext'
+import { useGlobalContext } from '../context/AppContext'
 
 import axios from 'axios';
 const LOGIN_URL = '/login'

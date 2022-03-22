@@ -1,11 +1,15 @@
 .about {
   width: 100%;
   height: 100%;
+  background-color: $color-geyser;
 }
 
 .about__wrapper {
   width: 100%;
   height: 100%;
+  border-radius: 0 0 5rem 5rem;
+  padding-bottom: 25rem;
+  background: $color-alabaster;
 }
 
 .about__presentation {
@@ -25,6 +29,19 @@
   @extend %cover;
 
   object-fit: contain;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-17px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 
 //article
@@ -100,13 +117,13 @@
 }
 
 //symbole
-.about__symbole {
+.symbole {
   width: 100%;
   height: 100%;
   margin-top: 50rem;
 }
 
-.about__symbole__wrapper {
+.symbole__wrapper {
   position: relative;
   left: -19rem;
   //transform: translate(-50%, -50%);
@@ -116,13 +133,13 @@
   margin: 0 auto;
 }
 
-.about__symbole__media {
+.symbole__media {
   position: relative;
   width: 35.3rem;
   height: 37.4rem;
 }
 
-.about__symbole__media__img {
+.symbole__media__img {
   @extend %cover;
 
   object-fit: cover;

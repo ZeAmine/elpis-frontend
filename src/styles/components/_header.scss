@@ -26,7 +26,6 @@
   width: 85%;
   //max-width: 90rem;
   margin: 0 auto;
-  z-index: 2;
 }
 
 .header__nav {
@@ -39,15 +38,9 @@
   gap: 7rem;
 }
 
-.header__nav__link {
-  font-family: Helvetica, sans-serif;
-  font-size: 1rem;
-  font-weight: normal;
-  color: currentColor;
-}
-
 .header__nav__item__text {
   @extend %description14;
+  @extend %link--hidden;
 
   font-weight: 900;
   text-transform: uppercase;
@@ -59,16 +52,10 @@
   gap: 1.5rem;
 
   .login__btn {
-    @extend %button__cta--inactive
+    @extend %button__cta--inactive;
   }
 
   .register__btn {
-    @extend %button__cta--active
+    @extend %button__cta--active;
   }
-}
-
-.header__nav__item__btn {
-  @extend %button__cta--active;
-
-
 }

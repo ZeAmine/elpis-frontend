@@ -1,4 +1,4 @@
-import { articles, services, partners } from '../data';
+import { articles, services } from '../data';
 
 //components
 import Article from '../components/Article';
@@ -34,9 +34,38 @@ const Presentation = () => {
             ))}
           </div>
         </section>
+        <section className="pres__opinion">
+          <div className="pres__opinion__wrapper">
+            <div className="pres__opinion__content">
+              <div className="pres__opinion__content__top">
+                <h5 className="pres__opinion__content__title">Bessie Cooper</h5>
+                <span className="pres__opinion__content__subtitle">Solidaire</span>
+              </div>
+              <p className="pres__opinion__content__text">
+                Avant d’avoir l’application je regardais désespérément ces pauvres réfugiés à la télé sans savoir
+                comment me rendre utile. Maintenant je n’hésite plus j’en est déjà rencontré plusieurs, tous très sympa.
+              </p>
+              <div className="pres__opinion__content__slide">
+                <button className="pres__option__content__btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="icon__left">
+                    <path d="M17.77 3.77L16 2L6 12l10 10l1.77-1.77L9.54 12z"/>
+                  </svg>
+                </button>
+                <div className="pres__opinion__content__slide__text">01 <span>/04</span></div>
+                <button className="pres__option__content__btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="icon__right">
+                    <path d="M6.23 20.23L8 22l10-10L8 2L6.23 3.77L14.46 12z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="pres__partners">
           <div className="pres__partners__wrapper">
-            <h4 className="pres__partners__title">Nos partenaires</h4>
+            <h4 className="pres__partners__title">
+              Nos partenaires
+            </h4>
             <ul className="pres__partners__list">
               <li className="pres__partners__item">
                 <figure className="pres__partners__item__media">
@@ -56,6 +85,13 @@ const Presentation = () => {
             </ul>
           </div>
         </section>
+        <div className="symbole">
+          <div className="symbole__wrapper home__symbole">
+            <figure className="symbole__media">
+              <img src={process.env.PUBLIC_URL + "./assets/images/mini_symbole.png"} alt="symbole" className="symbole__media__img"/>
+            </figure>
+          </div>
+        </div>
       </div>
     </section>
   );

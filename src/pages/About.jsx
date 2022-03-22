@@ -41,10 +41,10 @@ const About = () => {
               </ul>
             </div>
           </section>
-          <div className="about__symbole">
-            <div className="about__symbole__wrapper">
-              <figure className="about__symbole__media">
-                <img src={process.env.PUBLIC_URL + "./assets/images/mini_symbole.png"} alt="symbole" className="about__symbole__media__img"/>
+          <div className="symbole">
+            <div className="symbole__wrapper">
+              <figure className="symbole__media">
+                <img src={process.env.PUBLIC_URL + "./assets/images/mini_symbole.png"} alt="symbole" className="symbole__media__img"/>
               </figure>
             </div>
           </div>

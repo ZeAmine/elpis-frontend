@@ -1,5 +1,86 @@
 footer {
   width: 100%;
-  height: 12rem;
-  background-color: red;
+  overflow: hidden;
+  background-color: $color-geyser;
+  z-index: z('footer');
+}
+
+.footer__wrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5rem 10rem;
+  border-radius: 5rem 5rem 0 0;
+  background-color: $color-geyser;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__lt {
+  display: flex;
+  align-items: flex-start;
+  gap: 12rem;
+}
+
+.footer__btn__top {
+  @extend %button__cta--inactive;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer__credits__item {
+  @extend %description14;
+  @extend %link--hidden;
+
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.footer__socials__list {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer__btm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 13rem;
+}
+
+.footer__btm__lt {
+  display: flex;
+  align-items: flex-end;
+  gap: 8.5rem;
+}
+
+.footer__lt__brand {
+  width: 12rem;
+}
+
+.footer__lt__nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 6.25rem;
+}
+
+.footer__lt__nav__text {
+  @extend %description14;
+
+  font-weight: 600;
+}
+
+.footer__contact__btn {
+  @extend %button__cta--active;
 }

@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import About from "./pages/About";
+import Cursor from "./components/Cursor";
 
 //component
 import Header from "./components/Header";
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Cursor/>
         <Header/>
         <Routes>
           <Route path="/"  element={<Home/>}/>
@@ -22,7 +24,7 @@ function App() {
           <Route path="/connection"  element={<Login/>}/>
           <Route path="/inscription"  element={<Register/>}/>
         </Routes>
-        {/*<Footer />*/}
+        <Footer />
       </Router>
     </div>
   );

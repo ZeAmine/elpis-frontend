@@ -1,26 +1,45 @@
 .pres {
   position: relative;
+  width: 100%;
   height: 100%;
+  background-color: $color-geyser;
 }
 
 .pres__wrapper {
   position: relative;
   width: 100%;
   height: 100%;
+  border-radius: 0 0 5rem 5rem;
+  padding-bottom: 15rem;
+  background: $color-alabaster;
 }
 
 .pres__bg__media {
   @extend %cover;
 
   width: 210.8rem;
-  height: 871.8rem;
+  height: 770rem;
 }
 
 .pres__bg__media__img {
   @extend %cover;
 
+  top: -15rem;
   left: -10rem;
   object-fit: contain;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-17px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 
 //title
@@ -29,7 +48,7 @@
 
   display: inline-block;
   float: right;
-  margin: 8.6rem 10rem 27rem 0;
+  margin: 8.6rem 10rem 37rem 0;
   white-space: nowrap;
 }
 
@@ -40,8 +59,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 30rem;
-  margin-bottom: 27rem;
+  margin-bottom: 8rem;
   padding: 10rem 0;
 }
 
@@ -75,8 +93,10 @@
 //services
 .pres__services {
   width: 100%;
-  margin: 40rem 0;
+  height: 100%;
   padding: 5rem 10rem;
+  margin-top: 40rem;
+  margin-bottom: 40rem;
 }
 
 .pres__services__title {
@@ -100,6 +120,78 @@
   margin: 0 auto;
 }
 
+//opinion
+.pres__opinion {
+  width: 100%;
+  height: 100%;
+}
+
+.pres__opinion__wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 10rem;
+  margin-bottom: 15rem;
+}
+
+.pres__opinion__title {
+  @extend %title48;
+
+  float: left;
+  margin-bottom: 17rem;
+}
+
+.pres__opinion__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.pres__opinion__content__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 3rem;
+}
+
+.pres__opinion__content__title {
+  @extend %title24;
+}
+
+.pres__opinion__content__subtitle {
+  @extend %title22;
+
+  color: $color-observatory;
+}
+
+.pres__opinion__content__text {
+  @extend %description36;
+
+  max-width: 120rem;
+  text-align: center;
+}
+
+.pres__opinion__content__slide {
+  @extend %center;
+
+  gap: 4rem;
+  margin-top: 8rem;
+}
+
+.pres__option__content__btn {
+  @extend %button__slide--active;
+}
+
+.pres__opinion__content__slide__text {
+  @extend %description24;
+
+  span {
+    color: $color-geyser;
+  }
+}
+
 //partners
 .pres__partners {
   display: inline-block;
@@ -111,6 +203,7 @@
 .pres__partners__wrapper {
   width: 100%;
   padding: 2rem 10rem;
+  margin-bottom: 20rem;
 }
 
 .pres__partners__title {
@@ -122,7 +215,7 @@
 
 .pres__partners__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -130,18 +223,18 @@
   position: relative;
 
   .pres__partners__item:nth-child(1) & {
-    width: 26rem;
-    height: 6rem;
+    width: 32rem;
+    height: 8rem;
   }
 
   .pres__partners__item:nth-child(2) & {
-    width: 13rem;
-    height: 13rem;
+    width: 17rem;
+    height: 17rem;
   }
 
   .pres__partners__item:nth-child(3) & {
-    width: 13rem;
-    height: 13rem;
+    width: 17rem;
+    height: 17rem;
   }
 }
 
@@ -150,4 +243,50 @@
 
   object-fit: contain;
   filter: grayscale(100);
+}
+
+//symbole
+.symbole {
+  width: 100%;
+  height: 100%;
+  margin-top: 50rem;
+}
+
+.symbole__wrapper {
+  position: relative;
+  left: -19rem;
+  //transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  width: 30rem;
+  margin: 0 auto;
+}
+
+.home__symbole {
+  left: 0;
+}
+
+.symbole__media {
+  position: relative;
+  width: 35.3rem;
+  height: 37.4rem;
+}
+
+.symbole__media__img {
+  @extend %cover;
+
+  object-fit: cover;
+  animation: scale 4s ease-in-out infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
