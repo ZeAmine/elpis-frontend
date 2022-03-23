@@ -5,7 +5,7 @@ const Hero = () => {
   const [hover, setHover] = useState(false);
 
   return (
-    <section className="hero" id="home">
+    <section className="hero" id="accueil">
       <div className="hero__wrapper">
         <figure className="hero__bg">
           <img src={process.env.PUBLIC_URL + "./assets/images/1.jpg"} alt="réfugiés" className="hero__bg__img"/>

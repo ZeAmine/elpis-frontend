@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 
 const Article = ({ title, description, textBtn, textBtn2, img }) => {
   return (
@@ -11,9 +12,11 @@ const Article = ({ title, description, textBtn, textBtn2, img }) => {
                 <span>{textBtn}</span>
               </button>
               {textBtn2 && (
-                <button className="article__btn site">
-                  <span>{textBtn2}</span>
-                </button>
+                <Link to="/accueil">
+                  <button className="article__btn site">
+                    <span>{textBtn2}</span>
+                  </button>
+                </Link>
               )}
             </div>
           )}

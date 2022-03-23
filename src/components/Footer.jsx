@@ -8,11 +8,11 @@ const Footer = () => {
       <div className="footer__wrapper">
         <div className="footer__inner">
           <div className="footer__lt">
-            <Link to="home">
+            <a href="#accueil">
               <button className="footer__btn__top">
                 <span className="footer__btn__top__text">Haut de page</span>
               </button>
-            </Link>
+            </a>
             <ul className="footer__list">
               <Link to="/">
                 <li className="footer__credits__item">accueil</li>

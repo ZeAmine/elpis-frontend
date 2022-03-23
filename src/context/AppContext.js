@@ -6,8 +6,10 @@ export const Provider = ({ children }) => {
   const [auth, setAuth] = useState({});
   const [cursor, setCursor] = useState({ active: false });
 
+  const [success, setSuccess] = useState(false);
+
   return (
-    <AppContext.Provider value={{ auth, setAuth, cursor, setCursor }}>
+    <AppContext.Provider value={{ auth, setAuth, cursor, setCursor, success, setSuccess }}>
       {children}
     </AppContext.Provider>
   );

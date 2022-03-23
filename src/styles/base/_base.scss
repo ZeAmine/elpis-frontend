@@ -19,6 +19,17 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background-color: $color-alabaster;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 50rem;
+  background-color: $color-observatory;
+}
+
 *,
 *:before,
 *:after {
