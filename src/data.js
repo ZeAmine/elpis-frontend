@@ -2,11 +2,11 @@ export const articles = [
   {
     id: 1,
     title: "Un réseau social",
-    description: "Ce réseau social à pour but d’aider les réfugiés en difficultés comme l’exemple des Ukrainiens " +
-      "qui arrivent par millions en Europe Central. Le rôle de Elpis est de vous aider à vous lancer dans l’aventure et " +
-      "de découvrir qui vous êtes vraiment, d’en apprendre sur vous-même et sur le monde qui vous entour." +
-      " Grâce à Elpis, vous allez pouvoir proposer un logement, de la nourriture, des bons plans, annoncer des " +
-      "évènements caritatifs, mais il y a aussi toute une rubrique pour les migrants, afin d’avoir des guides pratiques " +
+    description: "Ce réseau social à pour but d’aider les réfugiés en difficultés comme l’exemple des Ukrainiens" +
+      "qui arrivent par millions en Europe Central. Le rôle de Elpis est de vous aider à vous lancer dans l’aventure et" +
+      "de découvrir qui vous êtes vraiment, d’en apprendre sur vous-même et sur le monde qui vous entour.",
+    description2: " Grâce à Elpis, vous allez pouvoir proposer un logement, de la nourriture, des bons plans, annoncer des" +
+      "évènements caritatifs, mais il y a aussi toute une rubrique pour les migrants, afin d’avoir des guides pratiques" +
       "pour mieux vivre en France. Agir n’a jamais été aussi simple alors rejoignez nous.",
     textBtn: "Télécharger l'application",
     textBtn2: "S'inscrire",
@@ -15,10 +15,9 @@ export const articles = [
   {
     id: 2,
     title: "Comment ca fonctionne ?" ,
-    description: "It is a long established fact that a reader will be distracted by the readable content of a page " +
-      "when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of " +
-      "letters, as opposed to using 'Content here, content here', making it look like readable EnglishMany desktop publishing.",
-    textBtn: "Nous rejoindre",
+    description: "Elpis c’est une communauté solidaire pour aider les migrants, nous sommes là pour aider tous ceux qui sont en difficulté en France.\n" +
+      "Nous fonctionnons sur un principe de bénévolat, notre plateforme permet de vous mettre en relation avec les démunis, mais aussi de vous donner envie de passer à l’action.\n",
+    description2: "Nous avons pour but de créer une communauté grandissante qui veut aider à créer une véritable insertion sociale des réfugiés qui n’ont pas choisi leur situation, alors on peut au moins les aider à se sentir un peu comme chez eux.",
     img: "3.png",
   }
 ]

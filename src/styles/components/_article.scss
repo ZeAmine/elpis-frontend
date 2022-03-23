@@ -33,10 +33,17 @@
   @extend %title48
 }
 
+.article__text__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
 .article__text {
   @extend %description18;
 
-  max-width: 75rem;
+  max-width: 68rem;
 }
 
 //btns

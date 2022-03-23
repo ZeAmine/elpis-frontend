@@ -50,11 +50,7 @@ const Register = () => {
 
   useEffect(() => {
     setError('');
-  }, [email, pwd, matchPwd])
-
-  useEffect(() => {
-    setError('');
-  }, [email, pwd])
+  }, [name, firstName, email, pwd, matchPwd])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -83,15 +79,15 @@ const Register = () => {
       setSuccess(true);
       navigate('/');
     } catch (err) {
-      if (!err?.response) {
-        setError('No Server Response');
-      } else if (err.response?.status === 409) {
-        setError('Email Taken');
-      } else {
-        setError('Registration Failed')
-      }
-
-      errRef.current.focus();
+      setError("Un compte avec cette adresse e-mail existe déjà");
+      // if (!err?.response) {
+      //   setError('No Server Response');
+      // } else if (err.response?.status === 409) {
+      //   setError('Email Taken');
+      // } else {
+      //   setError('Registration Failed')
+      // }
+      // errRef.current.focus();
     }
   }
 
@@ -111,9 +107,14 @@ const Register = () => {
               <img src={process.env.PUBLIC_URL + "./assets/images/symbole_bg.png"} alt="background symbole" className="register__media__img"/>
             </figure>
             <div className="register__content">
-              <p ref={errRef} className={error ? "errmsg" : "offscreen"} aria-live="assertive">
-                {error}
-              </p>
+              <div className="register__error" style={{ display: error ? "flex" : "none" }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M1 21h22L12 2L1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                </svg>
+                <p ref={errRef} className="register__errmsg" aria-live="assertive">
+                  {error}
+                </p>
+              </div>
               <form onSubmit={handleSubmit} className="register__form">
                 <div className="register__container">
                   <label htmlFor="email" className="register__form__label">Nom</label>
@@ -154,6 +155,7 @@ const Register = () => {
                     value={email}
                     placeholder="nom@adresse.com"
                     className="register__form__input"
+                    style={{ borderColor: error && "red" }}
                     aria-invalid={validName ? "false" : "true"}
                     required
                   />

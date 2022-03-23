@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
 
-const Article = ({ title, description, textBtn, textBtn2, img }) => {
+const Article = ({ title, description, description2, textBtn, textBtn2, img }) => {
   return (
       <article className="article">
         <div className="article__content">
           <h4 className="article__title">{title}</h4>
-          <p className="article__text">{description}</p>
+          <div className="article__text__container">
+            <p className="article__text">{description}</p>
+            <p className="article__text">{description2}</p>
+          </div>
           {textBtn && (
             <div className="article__btns">
               <button className="article__btn app">
