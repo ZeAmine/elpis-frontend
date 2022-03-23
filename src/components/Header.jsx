@@ -4,6 +4,7 @@ import { useGlobalContext } from '../context/AppContext'
 
 const Header = () => {
   const { success, setSuccess } = useGlobalContext();
+  console.log(success)
 
   const [menu, setMenu] = useState(false)
 
@@ -39,7 +40,7 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-        { success ? (
+        {success ? (
           <div className="header__rt">
             <button className="header__rt__btn">
               <span>Poster un bon plan</span>

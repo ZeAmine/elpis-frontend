@@ -157,4 +157,7 @@
 
 .header__rt__user__menu__item__text {
   @extend %description14;
+
+  font-weight: 900;
+  text-transform: uppercase;
 }

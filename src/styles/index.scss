@@ -16,8 +16,11 @@
 @import 'pages/home';
 @import 'pages/about';
 @import 'pages/login';
-@import 'pages/register';
 @import 'pages/notFound';
+
+@import 'pages/register/register';
+@import 'pages/register/stepOne';
+@import 'pages/register/end';
 
 @import 'components/header';
 @import 'components/hero';

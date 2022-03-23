@@ -99,6 +99,42 @@
   }
 }
 
+.register__form__terms {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 2rem;
+  width: 41.2rem;
+  height: 100%;
+  padding: 1.2rem 0;
+}
+
+.register__form__terms__label {
+  @extend %description18;
+
+  display: block;
+  flex-wrap: wrap;
+
+  strong {
+    color: $color-observatory;
+    cursor: pointer;
+  }
+}
+
+.register__form__terms__input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 0.4rem;
+}
+
+input[type='checkbox']:checked {
+  border-color: red;
+  background-color: red;
+}
+
 .register__error {
   display: flex;
   justify-content: flex-start;
