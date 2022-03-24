@@ -1,0 +1,94 @@
+.fiche {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: $color-geyser;
+}
+
+.fiche__wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 12rem 10rem 15rem 10rem;
+  border-radius: 0 0 5rem 5rem;
+  background: $color-alabaster;
+  overflow: hidden;
+}
+
+.fiche__header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 25rem;
+  margin-top: 5rem;
+}
+
+.fiche__header__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  height: 100%;
+}
+
+.fiche__header__title {
+  @extend %title48;
+
+  text-align: center;
+}
+
+.fiche__header__label {
+  @extend %description12;
+
+  display: inline-block;
+  max-width: 16rem;
+  color: $color-observatory;
+  text-transform: uppercase;
+  padding: 0.5rem 1.2rem;
+  border: 0.2rem solid $color-observatory;
+  border-radius: 50rem;
+}
+
+.fiche__content {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  margin-top: 10rem;
+}
+
+.fiche__content__lt {
+  width: 40%;
+  height: 100vh;
+  padding: 4rem;
+}
+
+.fiche__content__lt__btns {
+  gap: 3rem;
+  width: 100%;
+  height: 20rem;
+}
+
+.fiche__content__btn {
+  @extend %button__cta--inactive;
+
+  margin-bottom: 2rem;
+}
+
+.fiche__content__rt {
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+
+  span {
+    font-weight: 900;
+  }
+}
+
+.fiche__content__text {
+  @extend %description18;
+
+  max-width: 80rem;
+}

@@ -32,6 +32,13 @@ const Header = () => {
                   <h4 className="header__nav__item__text">accueil</h4>
                 </Link>
               </li>
+              {success && (
+                <li className="header__nav__item">
+                  <Link to="/aide-administrative">
+                    <h4 className="header__nav__item__text">Aide administrative</h4>
+                  </Link>
+                </li>
+              )}
               <li className="header__nav__item">
                 <Link to="/a-propos">
                   <h4 className="header__nav__item__text">à propos</h4>

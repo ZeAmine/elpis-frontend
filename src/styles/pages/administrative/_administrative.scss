@@ -1,0 +1,53 @@
+.administrative {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: $color-geyser;
+}
+
+.administrative__wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 12rem 10rem 15rem 10rem;
+  border-radius: 0 0 5rem 5rem;
+  background: $color-alabaster;
+  overflow: hidden;
+}
+
+.administrative__header {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.administrative__header__label {
+  @extend %description12;
+
+  color: $color-observatory;
+  text-transform: uppercase;
+  padding: 0.5rem 1.2rem;
+  border: 0.2rem solid $color-observatory;
+  border-radius: 50rem;
+}
+
+.administrative__header__title {
+  @extend %title48;
+}
+
+.administrative__posts {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 10rem;
+}
+
+.administrative__cards {
+  display: flex;
+  align-items: flex-start;
+  gap: 5rem;
+  width: 100%;
+  height: 100%;
+}

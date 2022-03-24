@@ -1,0 +1,38 @@
+.post {
+  width: 40rem;
+  height: 32rem;
+  border-radius: 1.2rem;
+  outline: 0;
+  background-color: $color-geyser;
+
+  &:hover {
+    outline: 0.3rem solid $color-observatory;
+    background-color: transparent;
+    color: $color-observatory;
+  }
+}
+
+.post__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 2.4rem;
+}
+
+.post__title {
+  @extend %title24;
+
+  margin-bottom: 2rem;
+}
+
+.post__text {
+  @extend %description14;
+}
+
+.post__btn {
+  @extend %button__cta--active;
+
+  max-width: 17rem;
+}

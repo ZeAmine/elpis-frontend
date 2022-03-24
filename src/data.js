@@ -35,7 +35,7 @@ export const services = [
     },
     {
       id: 3,
-      title: "Aide administratif",
+      title: "Aide administrative",
       img: "6.png"
     }
 ]
@@ -95,30 +95,60 @@ export const slideItems = [
     id: 1,
     name: "Fabrice",
     category: "Réfugié",
-    quote: "Elpis m’a sauvé, j’étais sans logements, je dormais dans ma voiture. J’ai trouvé refuge chez un solidaire Roger, un accueil chaleureux qui redonne du baume au coeur.",
+    quote: "Elpis m’a sauvé, j’étais sans logements, je dormais dans ma voiture. J’ai trouvé refuge chez un solidaire " +
+      "Roger, un accueil chaleureux qui redonne du baume au coeur.",
   },
   {
     id: 2,
     name: "Luc",
     category: "Solidaire",
-    quote: "Je n’avais, jamais fait d’acte de bénévolat avant, Elpis depuis, je n’arrête plus, j’ai réussi à casser cette barrière mentale et depuis je m’éclate.",
+    quote: "Je n’avais, jamais fait d’acte de bénévolat avant, Elpis depuis, je n’arrête plus, j’ai réussi à casser cette" +
+      " barrière mentale et depuis je m’éclate.",
   },
   {
     id: 3,
     name: "Anais",
     category: "Solidaire",
-    quote: "Un grand merci à toutes, l’équipe Elpis, ils sont vraiment au top, disponible pour la moindre questions. Un staff super réactif et dynamique avec un vrai réseaux. En tant que bénévole chez l’abbé pierre, nous avons enfin une solution pour donner de l’ampleur à notre travail."
+    quote: "Un grand merci à toutes, l’équipe Elpis, ils sont vraiment au top, disponible pour la moindre questions. Un " +
+      "staff super réactif et dynamique avec un vrai réseaux. En tant que bénévole chez l’abbé pierre, nous avons enfin une solution pour donner de l’ampleur à notre travail."
   },
+
   {
     id: 4,
     name: "Hanna",
     category: "Réfugié",
-    quote: "Je viens d’arriver en france, j’étais perdu, et j’ai trouvé de très bon conseils, pour moi et mes enfants sur Elpis. merci encore pour votre aide à tous."
+    quote: "Je viens d’arriver en france, j’étais perdu, et j’ai trouvé de très bon conseils, pour moi et mes enfants sur " +
+      "Elpis. merci encore pour votre aide à tous."
   },
   {
     id: 5,
     name: "Bessie",
     category: "Solidaire",
-    quote: "Avant d’avoir l’application je regardais désespérément ces pauvres réfugiés à la télé sans savoir comment me rendre utile. Maintenant je n’hésite plus j’en est déjà rencontré plusieurs, tous très sympa.",
+    quote: "Avant d’avoir l’application je regardais désespérément ces pauvres réfugiés à la télé sans savoir comment me " +
+      "rendre utile. Maintenant je n’hésite plus j’en est déjà rencontré plusieurs, tous très sympa.",
   }
+]
+
+export const helpItems = [
+  {
+    id: 1,
+    title: "Les différents types de protection pour les réfugiés en France",
+    description: "Le statut de réfugié permet d’avoir la protection de L’OFPRA en termes juridiques et administratives " +
+      "et aussi elles ont vocation à bénéficier d’une carte...",
+    url: "differents-types-de-protection"
+  },
+  {
+    id: 2,
+    title: "Les réexamens des demandes d’asile ou de protection",
+    description: "Après un refus de votre demande, il faut rentrée en contact avec une SPADA, afin de vous fixer un nouveau " +
+      "rendez-vous.",
+    url: "reexamens-des-demandes-asile"
+  },
+  {
+    id: 3,
+    title: "Les mineurs non accompagnées",
+    description: "Un mineur non accompagné est un statuts de protection internationale, pour l’obtenir il faut avoir " +
+      "moins de 18 ans... ",
+      url: "mineurs-non-accompagnees"
+  },
 ]

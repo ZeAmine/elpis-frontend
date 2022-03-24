@@ -18,16 +18,22 @@
 @import 'pages/login';
 @import 'pages/notFound';
 
+@import 'pages/administrative/administrative';
+@import 'pages/administrative/fiche';
+
 @import 'pages/register/register';
 @import 'pages/register/profil';
 @import 'pages/register/end';
 
 @import 'components/header';
+@import 'components/footer';
 @import 'components/hero';
 @import 'components/presentation';
 @import 'components/article';
+@import 'components/slider';
+
 @import 'components/card';
 @import 'components/bubble';
-@import 'components/slider';
-@import 'components/footer';
+
+@import 'components/post';
 
