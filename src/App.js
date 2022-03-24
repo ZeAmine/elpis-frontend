@@ -8,6 +8,7 @@ import Administrative from "./pages/Administrative";
 import Protect from "./pages/Protect";
 import Reexamen from "./pages/Reexamen";
 import Mineur from "./pages/Mineur";
+import ListPost from "./pages/ListPost";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" exact element={<Home/>}/>
           <Route path="/accueil" exact element={<Home/>}/>
           <Route path="/a-propos" exact element={<About/>}/>
+          <Route path="/posts" exact element={<ListPost />}/>
           <Route path="/aide-administrative" exact element={<Administrative/>}/>
           <Route path="/differents-types-de-protection" exact element={<Protect />}/>
           <Route path="/reexamens-des-demandes-asile" exact element={<Reexamen />}/>

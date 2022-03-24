@@ -66,39 +66,31 @@ const Register = () => {
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
   //
-  //   // const v1 = EMAIL_REGEX.test(email);
-  //   // const v2 = PWD_REGEX.test(pwd);
-  //   //
-  //   // if (!v1 || !v2) {
-  //   //   return setError("Invalid Entry");
-  //   // }
+  //   const v1 = EMAIL_REGEX.test(email);
+  //   const v2 = PWD_REGEX.test(pwd);
+  //
+  //   if (!v1 || !v2) {
+  //     return setError("Invalid Entry");
+  //   }
   //
   //   try {
-  //     const response = await axios.post(
-  //       REGISTER_URL,
-  //       JSON.stringify({ email, pwd }),
-  //       {
-  //         headers: {'Content-Type': 'application/json'},
-  //         withCredentials: true
-  //       }
-  //     );
-  //     console.log(response?.data);
-  //     console.log(JSON.stringify(response))
-  //     setEmail('');
-  //     setPwd('');
-  //     setMatchPwd('');
+  //     const response = await axios.post(REGISTER_URL, {
+  //       headers: {
+  //         Authorization: 'Bearer ' + localStorage.get('userToken'),
+  //       },
+  //     });
   //     setSuccess(true);
   //     navigate('/');
+  //     return response?.data
   //   } catch (err) {
-  //     setError("Un compte avec cette adresse e-mail existe déjà");
-  //     // if (!err?.response) {
-  //     //   setError('No Server Response');
-  //     // } else if (err.response?.status === 409) {
-  //     //   setError('Email Taken');
-  //     // } else {
-  //     //   setError('Registration Failed')
-  //     // }
-  //     // errRef.current.focus();
+  //     if (!err?.response) {
+  //       setError('No Server Response');
+  //     } else if (err.response?.status === 409) {
+  //       setError('Email Taken');
+  //     } else {
+  //       setError('Registration Failed')
+  //     }
+  //     errRef.current.focus();
   //   }
   // }
 

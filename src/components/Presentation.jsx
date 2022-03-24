@@ -57,10 +57,6 @@ const Presentation = () => {
             ))}
           </div>
         </section>
-        {/*<section className="pres__slider">*/}
-        {/*  <div className="pres__slider__wrapper">*/}
-        {/*  </div>*/}
-        {/*</section>*/}
         <div className="section-center">
           {slideItems.map((slideItem, slideItemIndex) => (
              <Slider key={slideItem.id} slideItemIndex={slideItemIndex} {...slideItem}/>

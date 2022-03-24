@@ -35,16 +35,11 @@ const Login = () => {
   //         Authorization: 'Bearer ' + localStorage.get('userToken'),
   //       },
   //     });
-  //     console.log(response?.data);
   //     const token = response?.data?.token;
   //     localStorage.setItem('userToken', JSON.stringify(token));
-  //     setAuth({ email, pwd, token });
-  //     setEmail('');
-  //     setPwd('');
   //     setSuccess(true);
   //     navigate('/accueil');
   //   } catch(error) {
-  //     // setError("Adresse mail ou mot de passe incorrect")
   //     if (!error?.response) {
   //       setError('No Server Response');
   //     } else if (error.response?.status === 600) {

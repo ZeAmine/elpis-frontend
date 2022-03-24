@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Post = ({ title, description, url }) => {
+const Block = ({ title, description, url }) => {
   return (
     <>
       <Link to={`/${url}`}>
@@ -15,4 +15,4 @@ const Post = ({ title, description, url }) => {
   );
 };
 
-export default Post;
+export default Block;

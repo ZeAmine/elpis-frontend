@@ -1,25 +1,30 @@
-import { helpItems } from '../data';
 
-//components
-import Block from '../components/Block';
+const ListPost = () => {
 
-const Administrative = () => {
+  const fetchPosts = () => {
+    try {
+
+    } catch (error) {
+
+    }
+  }
+
   return (
     <section className="administrative">
       <div className="administrative__wrapper">
         <div className="administrative__header">
-          <div className="administrative__header__label">Aide Administrative</div>
-          <h1 className="administrative__header__title">Les fiches en rapport avec <br/> les aides administratives</h1>
+          <div className="administrative__header__label">Posts</div>
+          <h1 className="administrative__header__title">Les posts crées par la communauté</h1>
         </div>
         <div className="administrative__posts">
           <div className="administrative__cards">
-            {helpItems.map(helpItem => (
-              <Block key={helpItem} {...helpItem}/>
-            ))}
+            {/*{helpItems.map(helpItem => (*/}
+            {/*  <Block key={helpItem} {...helpItem}/>*/}
+            {/*))}*/}
           </div>
           <div className="post">
             <div className="post__inner">
-              <h3 className="post__title">Voir toutes les fiches</h3>
+              <h3 className="post__title">Voir tous les posts</h3>
               <button className="post__btn">
                 <span>Voir plus</span>
               </button>
@@ -31,4 +36,4 @@ const Administrative = () => {
   );
 };
 
-export default Administrative;
+export default ListPost;
