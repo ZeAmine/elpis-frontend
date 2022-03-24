@@ -14,7 +14,7 @@ const Administrative = () => {
         <div className="administrative__posts">
           <div className="administrative__cards">
             {helpItems.map(helpItem => (
-              <Block key={helpItem} {...helpItem}/>
+              <Block key={helpItem.id} {...helpItem}/>
             ))}
           </div>
           <div className="post">

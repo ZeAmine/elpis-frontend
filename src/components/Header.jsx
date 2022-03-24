@@ -4,9 +4,8 @@ import { useGlobalContext } from '../context/AppContext'
 
 const Header = () => {
   const { success, setSuccess } = useGlobalContext();
-  console.log(success)
 
-  const [menu, setMenu] = useState(false)
+  const [menu, setMenu] = useState(false);
 
   const handleSignOut = () => {
     setSuccess(false);
@@ -117,33 +116,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-// <nav className="header__nav">
-//   <ul className="header__nav__list">
-//     <li className="header__nav__item">
-//       <Link to="/accueil">
-//         <h4 className="header__nav__item__text">accueil</h4>
-//       </Link>
-//     </li>
-//     <li className="header__nav__item">
-//       <Link to="/a-propos">
-//         <h4 className="header__nav__item__text">à propos</h4>
-//       </Link>
-//     </li>
-//     <li className="header__nav__item">
-//       <div className="header__nav__item__btns">
-//         <Link to="/connection">
-//           <button className="header__nav__item__btn login__btn">
-//             <span>connection</span>
-//           </button>
-//         </Link>
-//         <Link to="/inscription">
-//           <button className="header__nav__item__btn register__btn">
-//             <span>inscription</span>
-//           </button>
-//         </Link>
-//       </div>
-//     </li>
-//   </ul>
-// </nav>
