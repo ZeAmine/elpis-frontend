@@ -8,9 +8,6 @@ import Register from "./pages/Register";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
-//components
-import Cursor from "./components/Cursor";
-
 //component
 import Header from "./components/Header";
 import Footer from "./components/Footer";

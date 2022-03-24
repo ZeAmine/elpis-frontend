@@ -1,0 +1,48 @@
+.pres__slider__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+
+  &.activeSlide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  &.lastSlide {
+    transform: translateX(-100%);
+  }
+  &.nextSlide {
+    transform: translateX(100%);
+  }
+}
+
+.pres__slider__content__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 3rem;
+}
+
+.pres__slider__content__title {
+  @extend %title24;
+}
+
+.pres__slider__content__subtitle {
+  @extend %title22;
+
+  color: $color-observatory;
+}
+
+.pres__slider__content__text {
+  @extend %description36;
+
+  max-width: 120rem;
+  text-align: center;
+}

@@ -1,11 +1,34 @@
-import { articles, services } from '../data';
+import {useEffect, useState} from "react";
+import { articles, services, slideItems } from '../data';
+import { useGlobalContext } from '../context/AppContext';
 
 //components
 import Article from '../components/Article';
+import Slider from '../components/Slider';
 import Card from '../components/Card';
-import React from "react";
 
 const Presentation = () => {
+  const { index, setIndex } = useGlobalContext();
+
+  useEffect(() => {
+    const lastIndex = slideItems.length - 1;
+    if (index < 0) {
+      setIndex(lastIndex);
+    }
+    if (index > lastIndex) {
+      setIndex(0);
+    }
+  }, [index, slideItems]);
+
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 5000);
+    return () => {
+      clearInterval(slider);
+    };
+  }, [index]);
+
   return (
     <section className="pres">
       <div className="pres__wrapper">
@@ -34,33 +57,28 @@ const Presentation = () => {
             ))}
           </div>
         </section>
-        <section className="pres__opinion">
-          <div className="pres__opinion__wrapper">
-            <div className="pres__opinion__content">
-              <div className="pres__opinion__content__top">
-                <h5 className="pres__opinion__content__title">Bessie Cooper</h5>
-                <span className="pres__opinion__content__subtitle">Solidaire</span>
-              </div>
-              <p className="pres__opinion__content__text">
-                Avant d’avoir l’application je regardais désespérément ces pauvres réfugiés à la télé sans savoir
-                comment me rendre utile. Maintenant je n’hésite plus j’en est déjà rencontré plusieurs, tous très sympa.
-              </p>
-              <div className="pres__opinion__content__slide">
-                <button className="pres__option__content__btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="icon__left">
-                    <path d="M17.77 3.77L16 2L6 12l10 10l1.77-1.77L9.54 12z"/>
-                  </svg>
-                </button>
-                <div className="pres__opinion__content__slide__text">01 <span>/04</span></div>
-                <button className="pres__option__content__btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="icon__right">
-                    <path d="M6.23 20.23L8 22l10-10L8 2L6.23 3.77L14.46 12z"/>
-                  </svg>
-                </button>
-              </div>
-            </div>
+        {/*<section className="pres__slider">*/}
+        {/*  <div className="pres__slider__wrapper">*/}
+        {/*  </div>*/}
+        {/*</section>*/}
+        <div className="section-center">
+          {slideItems.map((slideItem, slideItemIndex) => (
+             <Slider key={slideItem.id} slideItemIndex={slideItemIndex} {...slideItem}/>
+          ))}
+          <div className="pres__slider__btns">
+            <button className="pres__slider__btn" onClick={() => setIndex(index - 1)}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="icon__left">
+                <path d="M17.77 3.77L16 2L6 12l10 10l1.77-1.77L9.54 12z"/>
+              </svg>
+            </button>
+            <div className="pres__slider__btn__text">{`0${index}`}<span>/04</span></div>
+            <button className="pres__slider__btn" onClick={() => setIndex(index + 1)}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="icon__right">
+                <path d="M6.23 20.23L8 22l10-10L8 2L6.23 3.77L14.46 12z"/>
+              </svg>
+            </button>
           </div>
-        </section>
+        </div>
         <section className="pres__partners">
           <div className="pres__partners__wrapper">
             <h4 className="pres__partners__title">
@@ -98,13 +116,3 @@ const Presentation = () => {
 };
 
 export default Presentation;
-
-
-// <section className="pres__partners">
-//   <h4 className="pres__partners__title">Nos partenaires</h4>
-//   <div className="pres__partners__cards">
-//     {partners.map(partner => (
-//       <Card key={partner.id} {...partner}/>
-//     ))}
-//   </div>
-// </section>

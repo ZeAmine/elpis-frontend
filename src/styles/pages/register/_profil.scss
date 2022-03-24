@@ -1,32 +1,32 @@
-.stepone {
+.register__profil {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
 
-.stepone__top {
+.register__profil__top {
   margin-bottom: 3rem;
 }
 
-.stepone__top__title {
+.register__profil__top__title {
   @extend %title36;
 
   margin-bottom: 2rem;
 }
 
-.stepone__top__subtitle {
+.register__profil__top__subtitle {
   @extend %description18;
 
   max-width: 45rem;
 }
 
-.stepone__checkbox__container {
+.register__profil__checkbox__container {
   display: block;
   margin-bottom: 1rem;
 }
 
-.stepone__checkbox__input {
+.register__profil__checkbox__input {
   position: absolute;
   height: 10px;
   width: 10px;
@@ -35,7 +35,7 @@
   white-space: nowrap;
   overflow: hidden;
 
-  &:checked + .stepone__checkbox__content {
+  &:checked + .register__profil__checkbox__content {
     color: $color-observatory;
     border-color: $color-observatory;
     box-shadow: 0 5px 10px rgba(#000, 0.1);
@@ -47,13 +47,13 @@
       border-color: $color-observatory;
     }
 
-    .stepone__checkbox__icon,
-    .stepone__checkbox__block__label {
+    .register__profil__checkbox__icon,
+    .register__profil__checkbox__block__label {
       color: $color-observatory;
     }
   }
 
-  &:focus + .stepone__checkbox__content {
+  &:focus + .register__profil__checkbox__content {
     border-color: $color-observatory;
 
     &:before {
@@ -63,7 +63,7 @@
   }
 }
 
-.stepone__checkbox__content {
+.register__profil__checkbox__content {
   position: relative;
   display: flex;
   justify-content: center;
@@ -109,7 +109,7 @@
   }
 }
 
-.stepone__checkbox__icon {
+.register__profil__checkbox__icon {
   padding: 2rem;
   border-right: 0.1rem solid $color-geyser;
 
@@ -119,17 +119,17 @@
   }
 }
 
-.stepone__checkbox__block {
+.register__profil__checkbox__block {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.4rem;
 }
 
-.stepone__checkbox__block__label {
+.register__profil__checkbox__block__label {
   @extend %title22;
 }
 
-.stepone__checkbox__block__text {
+.register__profil__checkbox__block__text {
   @extend %description14;
 }

@@ -120,77 +120,54 @@
   margin: 0 auto;
 }
 
-//opinion
-.pres__opinion {
-  width: 100%;
-  height: 100%;
-}
-
-.pres__opinion__wrapper {
-  width: 100%;
-  height: 100%;
-  padding: 10rem;
-  margin-bottom: 15rem;
-}
-
-.pres__opinion__title {
-  @extend %title48;
-
-  float: left;
-  margin-bottom: 17rem;
-}
-
-.pres__opinion__content {
+//slider
+.section-center {
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  justify-content: center;
+  width: 140rem;
+  height: 42rem;
+  margin: 0 auto;
+  margin-bottom: 30rem;
+  //overflow: hidden;
 }
 
-.pres__opinion__content__top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 3rem;
-}
-
-.pres__opinion__content__title {
-  @extend %title24;
-}
-
-.pres__opinion__content__subtitle {
-  @extend %title22;
-
-  color: $color-observatory;
-}
-
-.pres__opinion__content__text {
-  @extend %description36;
-
-  max-width: 120rem;
-  text-align: center;
-}
-
-.pres__opinion__content__slide {
+.pres__slider__btns {
   @extend %center;
 
   gap: 4rem;
-  margin-top: 8rem;
+  margin-top: 49rem;
 }
 
-.pres__option__content__btn {
+.pres__slider__btn {
   @extend %button__slide--active;
 }
 
-.pres__opinion__content__slide__text {
+.pres__slider__btn__text {
   @extend %description24;
 
   span {
     color: $color-mid-gray;
   }
 }
+
+//.pres__slider {
+//  position: relative;
+//  width: 100%;
+//  height: 100%;
+//}
+//
+//.pres__slider__wrapper {
+//  position: relative;
+//  display: flex;
+//  align-items: center;
+//  width: 120rem;
+//  height: 42rem;
+//  padding: 10rem;
+//  margin-bottom: 15rem;
+//  overflow: hidden;
+//}
 
 //partners
 .pres__partners {
