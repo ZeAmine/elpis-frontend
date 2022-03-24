@@ -1,13 +1,25 @@
+import { useState, useEffect } from 'react';
+
+import axios from '../api/axios';
+const POST_URL = '/create'
 
 const ListPost = () => {
+  const [postItems, setPostItems] = useState([]);
+  const [error, setError] = useState('')
 
-  const fetchPosts = () => {
+  const fetchPosts = async () => {
     try {
-
+      const response = await axios.get(POST_URL);
+      console.log(response?.data);
+      setPostItems(response.data);
     } catch (error) {
-
+      setError(error)
     }
   }
+
+  useEffect(() => {
+    fetchPosts();
+  }, [])
 
   return (
     <section className="administrative">
